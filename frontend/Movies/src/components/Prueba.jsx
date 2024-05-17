@@ -9,7 +9,7 @@ import { ActoresCard } from "./ActoresCard";
 // const pathURL = `/person/popular` // Top 20 Actores
 let id = 974169
 // const pathURL = `/person/${id}/external_ids` // Consultar Redes Sociales de Actores
-const pathURL = `/person/${id}/combined_credits` // Consultar Redes Sociales de Actores
+const pathURL = `/person/${id}/movie_credits` // Consultar Redes Sociales de Actores
 
 const Prueba = () => {    
     const [prueba ,setPrueba] = useState([])
@@ -21,6 +21,7 @@ const Prueba = () => {
         })
     )},[])
 
+    
  
     return (
     

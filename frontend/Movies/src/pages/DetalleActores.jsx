@@ -1,5 +1,7 @@
+import { PeliculasDelActor } from "../components/PeliculasDelActor.jsx"
 import { PeliculasPopular } from "../components/PeliculasPopular.jsx"
 import { Redes } from "../components/Redes.jsx"
+import { SeriesDelActor } from "../components/SeriesDelActor.jsx"
 import { getApi } from "../utils/conexionAPI.js"
 import { formatoFecha } from '../utils/formatoFecha.js'
 import{useState, useEffect} from 'react'
@@ -16,7 +18,7 @@ const DetalleActores = () => {
 
     useEffect(() =>{
         getApi(`${pathURL}${id}`).then((data=>{
-            console.log(data);
+            // console.log(data);
             setDetalleActor(data)
         })
         
@@ -64,6 +66,13 @@ const DetalleActores = () => {
             </div>
         </div>
        
+
+        <PeliculasDelActor/>
+        <SeriesDelActor/>
+           
+
+     
+        
         
         </>
     )

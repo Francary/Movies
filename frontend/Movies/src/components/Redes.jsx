@@ -11,7 +11,7 @@ const Redes = () => {
 
     useEffect(() =>{
         getApi(pathURL).then((data =>{
-            console.log(data.facebook_id);
+            console.log(data);
             setRedes(data)
         })
     )},[])

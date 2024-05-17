@@ -3,12 +3,13 @@ import {Link} from 'react-router-dom'
 const PeliculasCard = ({peliculaMap}) => {
 
     const imgURL = `https://image.tmdb.org/t/p/w300${peliculaMap.poster_path}`
-   
+
+  
     return (
         
             <div className='card-medium grid'>
                 <Link className='link-card' to={`/peliculas/${peliculaMap.id}`}> 
-                    <img className='img-medium' src={imgURL} alt={peliculaMap.title} />
+                     {peliculaMap.poster_path != null ? (<img className='img-medium' src={imgURL } alt={peliculaMap.title} />):(<i class={`fa-solid fa-film avatar d-flex align-items-center justify-content-center img-medium`}></i>)}
                     <small>{peliculaMap.title}</small>          
                 </Link>
             </div>       
