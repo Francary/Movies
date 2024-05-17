@@ -1,3 +1,5 @@
+import { PeliculasPopular } from "../components/PeliculasPopular.jsx"
+import { Redes } from "../components/Redes.jsx"
 import { getApi } from "../utils/conexionAPI.js"
 import { formatoFecha } from '../utils/formatoFecha.js'
 import{useState, useEffect} from 'react'
@@ -25,21 +27,15 @@ const DetalleActores = () => {
     }
 
     const imgURL = `https://image.tmdb.org/t/p/w300${detalleActor.profile_path}`
+    
     return(
     <>
         <div className="card mb-3 mt-5 max-width" >
             <div className="row g-0">
                 <div className="col-md-3 d-grid justify-content-center">
                     <img src={imgURL} alt={detalleActor} className="img-medium m-3 d-flex justify-content-center"  />
-                    <div className="d-flex gap-3 justify-content-center">
-
-                    <i class="fa-brands fa-instagram m-1"></i>
-                    <i class="fa-brands fa-tiktok m-1"></i>
-                    <i class="fa-brands fa-twitter m-1"></i>
-                    <i class="fa-brands fa-facebook m-1"></i>
-                    </div>
-                        
-                        
+                    
+                    <Redes/>       
                 
                 </div>
                 <div className="col-md-9">
@@ -67,6 +63,7 @@ const DetalleActores = () => {
                 </div>
             </div>
         </div>
+       
         
         </>
     )

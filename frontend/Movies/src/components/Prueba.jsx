@@ -6,26 +6,28 @@ import { ActoresCard } from "./ActoresCard";
 // const pathURL = `/movie/823464/credits` // Actores de Peliculas
 // const pathURL = `/movie/823464/videos` // Consulta los Trailers
 
-const pathURL = `/person/popular`
+// const pathURL = `/person/popular` // Top 20 Actores
+let id = 974169
+// const pathURL = `/person/${id}/external_ids` // Consultar Redes Sociales de Actores
+const pathURL = `/person/${id}/combined_credits` // Consultar Redes Sociales de Actores
 
 const Prueba = () => {    
-    const [actores , setActores] = useState([])
+    const [prueba ,setPrueba] = useState([])
     
     useEffect(() => {    
         getApi(pathURL).then((data =>{ 
-            console.log(data.results);
-            setActores(data.results)
+            console.log(data);
+            setPrueba(data)
         })
     )},[])
 
  
     return (
     
-    <ul className="grid max-width">
-        {actores.map((actor)=>(
-            <ActoresCard key={actor.id} actorMap={actor}/> 
-        ))}
-    </ul>
+
+        <h1>{prueba.facebook_id}</h1>
+    
+   
         
         
 )
