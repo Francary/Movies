@@ -1,11 +1,17 @@
-
-https://www.themoviedb.org/settings/api
-
-
+URL PAGINA DE MOVIES
 https://www.themoviedb.org/
 
-
+URL DEVELOPER
 https://developer.themoviedb.org/docs/getting-started
 
+URL API REFERENCE
+https://developer.themoviedb.org/reference/intro/getting-started
 
+URL VER TOKEN 
+https://www.themoviedb.org/settings/api
+
+URL BASE API
 https://api.themoviedb.org/3"
+
+URL BASE Imagenes
+https://image.tmdb.org/t/p/w300

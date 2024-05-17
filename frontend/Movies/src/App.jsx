@@ -1,16 +1,18 @@
-import {BrowserRouter, Routes, Route,Link} from "react-router-dom"
-import { LandingPage } from "./pages/LandingPage"
-import { DetallePeliculas } from "./pages/DetallePeliculas"
+import { Router } from "./routes/router"
+import { Navbar } from "./components/Navbar";
+import {BrowserRouter} from "react-router-dom"
 
 const App = () => {
     return (
+        
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element= {<LandingPage/>}/>    
-                <Route path="/pelicula/:peliculaId" element ={<DetallePeliculas/>}/>    
-                <Route path="/hello" element= 'Hello World'/>    
-            </Routes>      
+            <Navbar/>
+            <Router/>
         </BrowserRouter>
+        
+        
+       
+    
     
     
      )

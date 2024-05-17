@@ -1,0 +1,107 @@
+body{
+    background-color: #333333;
+    color: white;
+    
+    margin: auto;
+
+  }
+  .max-width{
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , 230px);
+    gap: 40px;
+    padding-top: 40px;
+    justify-content: center;
+
+  }
+  .container-actores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .container-trailer{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .puntuaje {
+    background-color: #333333;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    align-content: center;
+    text-align: center;
+    
+  }
+  .puntuaje:hover{
+    background-color: rgb(20, 8, 8);
+    width: 55px;
+    height: 55px;
+  }
+i {
+    font-size: 2rem;   
+}
+
+.avatar {
+  font-size: 14rem;
+  background-color: #757474; 
+  
+}
+
+  
+  @media (max-width: 560px){
+    .grid{
+      grid-template-columns: 100%;
+    }
+  }
+  
+  .card-medium {
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .link-card{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+  }
+
+  .link-card :hover{
+    background-color: hsla(0, 0%, 100%, 0.459);
+    padding: 5px;
+    border-radius: 20px;
+  
+
+  
+  }
+  
+  .img-medium{
+    border-radius: 20px;
+    width: 230px;
+    height: 345px;
+  }
+
+  
+  
+  @media  (max-width: 560px){
+    .card-medium{
+      width: 90%;
+      height: auto;
+    }
+  
+  }
+
+  img {
+    max-width: 300px;
+  }
