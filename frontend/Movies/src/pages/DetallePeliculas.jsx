@@ -33,7 +33,9 @@ const DetallePeliculas = () => {
     <div className="card mb-3 mt-5 max-width" >
   <div className="row g-0">
     <div className="col-md-3">
-      <img src={imgURL} alt={detallePelicula.title} className="img-medium m-3 d-flex justify-content-center"  />
+      {/* <img src={imgURL} alt={detallePelicula.title} className="img-medium m-3 d-flex justify-content-center"  /> */}
+      { detallePelicula.poster_path != null ? (<img src={ imgURL} className={`${classImg} img-medium m-3 d-flex justify-content-center`}  alt={detallePelicula.title} />):(<i className={`fa-solid fa-film avatar d-flex align-items-center justify-content-center ${classImg} m-3`}></i>)}
+
     </div>
     <div className="col-md-9">
         <div className="card-body">

@@ -1,5 +1,4 @@
 import { PeliculasDelActor } from "../components/PeliculasDelActor.jsx"
-import { PeliculasPopular } from "../components/PeliculasPopular.jsx"
 import { Redes } from "../components/Redes.jsx"
 import { SeriesDelActor } from "../components/SeriesDelActor.jsx"
 import { getApi } from "../utils/conexionAPI.js"
@@ -8,8 +7,6 @@ import{useState, useEffect} from 'react'
 import { useParams} from "react-router-dom"
 
 const pathURL = '/person/'
-let puntucion = 0
-
 
 const DetalleActores = () => {
 
@@ -57,24 +54,16 @@ const DetalleActores = () => {
                             <div className="col-md-2">
                                 <h6>Puntuacion:</h6>
                                 <div className='puntuaje font-weight-bold '>
-                                    {  puntucion =`${Math.round(detalleActor.popularity *10)}`  } 
+                                    {  Math.round(detalleActor.popularity *10) } 
                                 </div>
-                            </div>
-                        
+                            </div>                     
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-       
-
         <PeliculasDelActor/>
-        <SeriesDelActor/>
-           
-
-     
-        
-        
+        <SeriesDelActor/>       
         </>
     )
 }
