@@ -29,13 +29,14 @@ const DetalleActores = () => {
     }
 
     const imgURL = `https://image.tmdb.org/t/p/w300${detalleActor.profile_path}`
-    
+    const classImg ='img-medium'
     return(
     <>
         <div className="card mb-3 mt-5 max-width" >
             <div className="row g-0">
                 <div className="col-md-3 d-grid justify-content-center">
-                    <img src={imgURL} alt={detalleActor} className="img-medium m-3 d-flex justify-content-center"  />
+                     
+                    { detalleActor.profile_path != null ? (<img src={ imgURL} className={`${classImg} img-medium m-3 d-flex justify-content-center`}  alt={detalleActor.name} />):(<i className={`fa-solid fa-user-tie avatar d-flex align-items-center justify-content-center ${classImg} m-3`}></i>)}
                     
                     <Redes/>       
                 

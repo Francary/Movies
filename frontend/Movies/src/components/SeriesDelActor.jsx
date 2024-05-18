@@ -17,7 +17,7 @@ const SeriesDelActor = () => {
     useEffect(() =>{
         
         getApi(pathURL).then((data =>{
-            console.log(data.cast);
+            // console.log(data.cast);
             setSerie(data.cast)
             
             

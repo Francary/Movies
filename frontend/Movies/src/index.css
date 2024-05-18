@@ -53,8 +53,8 @@ i {
 }
 
 .avatar {
-  font-size: 14rem;
-  background-color: #757474; 
+  font-size: 10rem;
+  background-color: #606060; 
   
 }
 
@@ -110,3 +110,6 @@ i{
   color: #000000;
 }
  
+.redes{
+  display: none
+}

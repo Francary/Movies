@@ -17,7 +17,7 @@ const PeliculasDelActor = () => {
     useEffect(() =>{
         
         getApi(pathURL).then((data =>{
-            console.log(data.cast);
+            // console.log(data.cast);
             setPelicula(data.cast)
             
             

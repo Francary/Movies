@@ -14,14 +14,14 @@ const Actores = ({url, classImg}) =>{
 
       
         getApi(`${pathURL}`).then((data =>{ 
-            // console.log(data.cast);
+            console.log(data.cast );
             setActores(data.cast)
         })
     )},[])
-
+    if(actores != null)
  
     return (
-        <  >
+        <>
         <h2 className="max-width mb-3">Actores:</h2>
         <div className="container-actores max-width">
 
