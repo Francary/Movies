@@ -24,26 +24,26 @@ const Redes = () => {
             <a  href={`https://www.instagram.com/${redes.instagram_id}`}
                 title="Visitar Instagram"
                 target="_blank"
-                className={`${redes.instagram_id ===""? "redes":""}`} > 
+                className={`${!redes.instagram_id ? "redes":""}`} > 
                 
                 <i className="fa-brands fa-instagram m-1 "></i>
             </a>
             <a href={`https://www.tiktok.com/@${redes.tiktok_id}`}
                 title="Visitar Tiktok"
                 target="_blank"
-                className={`${redes.tiktok_id ===""? "redes":""}`}>
+                className={`${!redes.tiktok_id? "redes":""}`}>
                 <i className="fa-brands fa-tiktok m-1"></i>
             </a>
             <a href={`https://twitter.com/${redes.twitter_id}`}
                 title="Visitar Twitter"
                 target="_blank"
-                className={`${redes.twitter_id ===""? "redes":""}`}>
+                className={`${!redes.twitter_id? "redes":""}`}>
                 <i className="fa-brands fa-twitter m-1"></i>
             </a>
             <a href={`https://www.facebook.com/${redes.facebook_id}`}
                 title="Visitar Facebook"
                 target="_blank"
-                className={`${redes.facebook_id ===""? "redes":""}`}>
+                className={`${!redes.facebook_id? "redes":""}`}>
                 <i className="fa-brands fa-facebook m-1"></i>
             </a>
         </div>
