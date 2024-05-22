@@ -21,6 +21,7 @@ const SeriesPopular = ()=>{
     return(
        
         <div className='max-width  slider-container'>
+            <h2 className="max-width mt-1">Top 20 Series :</h2>
             <Slider {...settings}>
                 {series.map((serie) =>(
                     <SeriesCard  key={serie.id} serieMap = {serie}/>

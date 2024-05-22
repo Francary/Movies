@@ -21,15 +21,17 @@ const PeliculasPopular = () => {
     },[])
    
     return(
-     
+        
         <div className='max-width  slider-container'>
+        <h2 className="max-width mt-5">Top 20 Peliculas :</h2>
             <Slider {...settings}>
                 {popular.map((pelicula) =>(
                     <PeliculasCard key={pelicula.id} peliculaMap = {pelicula}/>
                 ))}
             </Slider>
         </div>
-              
+        
+       
     )
 
 }
