@@ -7,6 +7,7 @@ import { Trailer } from '../components/Trailer.jsx'
 import { formatoFecha } from '../utils/formatoFecha.js'
 
 const pathURL = '/movie/'
+const idioma = "?language=es-AR"
 const classImg ='img-medium'
 let puntucion = 0
 
@@ -16,7 +17,7 @@ const DetallePeliculas = () => {
     const {id} = useParams()
 
     useEffect(() =>{
-        getApi(`${pathURL}${id}`).then((data =>{
+        getApi(`${pathURL}${id}${idioma}`).then((data =>{
 
         console.log(data);
         setDetallePelicula(data)

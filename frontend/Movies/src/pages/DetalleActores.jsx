@@ -7,6 +7,7 @@ import{useState, useEffect} from 'react'
 import { useParams} from "react-router-dom"
 
 const pathURL = '/person/'
+const idioma = "?language=es-AR"
 
 const DetalleActores = () => {
 
@@ -14,7 +15,7 @@ const DetalleActores = () => {
     const {id} = useParams()
 
     useEffect(() =>{
-        getApi(`${pathURL}${id}`).then((data=>{
+        getApi(`${pathURL}${id}${idioma}`).then((data=>{
             // console.log(data);
             setDetalleActor(data)
         })

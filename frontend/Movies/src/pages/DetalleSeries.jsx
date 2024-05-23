@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { Trailer } from '../components/Trailer.jsx'
 
 const pathURL = '/tv/'
+const idioma = "?language=es-AR"
 const classImg ='img-medium'
 let puntucion = 0
 
@@ -16,7 +17,7 @@ const DetalleSeries  = () => {
     const {id} = useParams()
 
     useEffect(() =>{
-        getApi(`${pathURL}${id}`).then((data =>{
+        getApi(`${pathURL}${id}${idioma}`).then((data =>{
 
         console.log(data);
         setDetalleSerie(data)

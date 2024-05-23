@@ -6,6 +6,7 @@ import { settings } from "../utils/slider.js";
 
 
 const pathURL = '/movie/popular'
+const idioma = "?language=es-AR"
 
 const PeliculasPopular = () => {
 
@@ -13,7 +14,7 @@ const PeliculasPopular = () => {
 
     useEffect(() =>{
 
-        getApi(pathURL).then((data =>{
+        getApi(`${pathURL}${idioma}`).then((data =>{
             // console.log(data.results);
             setPopular(data.results)
             
