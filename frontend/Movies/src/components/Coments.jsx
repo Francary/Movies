@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import {Link} from 'react-router-dom'
 import {collection, getDocs} from "firebase/firestore"
 import {db} from '../firebase/firebase.js'
+import { Create } from "./Create.jsx"
 
 
 
@@ -47,10 +48,11 @@ const Coments =({referencia})=>{
                         </thead>
                     </table>
 
-                            <form className=" d-flex m-3 gap-3 col"  >
+                                <Create referecia={referencia}  getComents={getComents}/>
+                            {/* <form className=" d-flex m-3 gap-3 col"  >
                                 <input type="text" className="form-control" name="description"  id="description" placeholder="Escribir comentario" />
                                 <button className="btn btn-dark" type="submit" >Comentar</button>
-                            </form>  
+                            </form>   */}
                 </div>
 
             </div>

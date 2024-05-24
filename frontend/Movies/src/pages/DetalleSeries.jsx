@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom'
 import { Actores } from '../components/Actores.jsx'
 import { Link } from 'react-router-dom'
 import { Trailer } from '../components/Trailer.jsx'
-
+import { Coments } from '../components/Coments.jsx'
 const pathURL = '/tv/'
 const idioma = "?language=es-AR"
 const classImg ='img-medium'
@@ -79,11 +79,9 @@ const DetalleSeries  = () => {
         </div>
     </div>
   </div>
-  <form className=" d-flex m-3 gap-3 "  >
-        <input type="text" className="form-control" name="description"  id="description" placeholder="Escribir comentario" />
-        <button className="btn btn-dark" type="submit" >Comentar</button>
-    </form>  
+ 
 </div>
+    <Coments referencia={`S${id}`}/>
     <Trailer url={pathURL}/>
     <Actores url={pathURL} classImg={classImg} />
      
