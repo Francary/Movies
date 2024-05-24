@@ -19,7 +19,7 @@ const Trailer = ({url}) =>{
     if(trailer != null)
     
 return(
-    <div className="max-width ">
+    <div className="max-width">
         <h2>Trailer:</h2>
         <div className="mt-3 mb-3  rounded-3 container-trailer">
             

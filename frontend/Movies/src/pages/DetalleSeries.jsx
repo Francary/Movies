@@ -40,7 +40,7 @@ const DetalleSeries  = () => {
     </div>
     <div className="col-md-9">
         <div className="card-body">
-            <h4 className="card-title">{detalleSerie.title}</h4>
+            <h4 className="card-title">{detalleSerie.name}</h4>
             <p className="card-text">{detalleSerie.overview}</p>
             <div className="row ">
                 <div className="col-md-2">

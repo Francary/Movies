@@ -5,6 +5,7 @@ import { Actores } from '../components/Actores.jsx'
 import { Link } from 'react-router-dom'
 import { Trailer } from '../components/Trailer.jsx'
 import { formatoFecha } from '../utils/formatoFecha.js'
+import { Coments } from '../components/Coments.jsx'
 
 const pathURL = '/movie/'
 const idioma = "?language=es-AR"
@@ -85,6 +86,7 @@ const DetallePeliculas = () => {
     </form>  
 </div>
 </div>
+    <Coments referencia={`P${id}`}/>
     <Trailer url={pathURL}/>  
     <Actores url={pathURL} classImg={classImg}/>
 </>
