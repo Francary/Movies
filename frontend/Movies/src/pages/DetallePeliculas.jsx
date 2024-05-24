@@ -78,13 +78,7 @@ const DetallePeliculas = () => {
         </div>
     </div>
   </div>
-<div>
 
-    <form className=" d-flex m-3 gap-3 "  >
-        <input type="text" className="form-control" name="description"  id="description" placeholder="Escribir comentario" />
-        <button className="btn btn-dark" type="submit" >Comentar</button>
-    </form>  
-</div>
 </div>
     <Coments referencia={`P${id}`}/>
     <Trailer url={pathURL}/>  

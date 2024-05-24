@@ -30,7 +30,7 @@ const Coments =({referencia})=>{
     return(
         <>
 
-        <div className="max-width">
+        <div className="max-width ">
         <h2>Comentarios:</h2>
             <div className="mt-3 mb-3  rounded-3 container-trailer">
                 <div className="col">
@@ -46,8 +46,16 @@ const Coments =({referencia})=>{
                                 ))}
                         </thead>
                     </table>
+
+                            <form className=" d-flex m-3 gap-3 col"  >
+                                <input type="text" className="form-control" name="description"  id="description" placeholder="Escribir comentario" />
+                                <button className="btn btn-dark" type="submit" >Comentar</button>
+                            </form>  
                 </div>
+
             </div>
+                                   
+                       
         </div>
         </>
     )
