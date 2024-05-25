@@ -23,17 +23,24 @@ const PeliculasDelActor = () => {
             
         })
     )},[])
+    if(pelicula.length>0)
    
     return(
      
         <div className='max-width  slider-container'>
             <h2 className="max-width mb-3">Peliculas:</h2>
-            
-            <Slider {...settings}>
+            {pelicula.length>1 ?
+
+             (   <Slider {...settings}>
                 {pelicula.map((pelicula) =>(
                     <PeliculasCard key={pelicula.id} peliculaMap = {pelicula}/>
                 ))}
-            </Slider>
+            </Slider>)
+            :
+         (   pelicula.map((pelicula) =>(
+                <PeliculasCard key={pelicula.id} peliculaMap = {pelicula}/>
+            )))
+            }
         </div>
               
     )
