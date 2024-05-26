@@ -19,7 +19,7 @@ const Coments =({referencia})=>{
                 ...doc.data(), id:doc.id
             }))
         )
-        console.log(coments);
+        // console.log(coments);
     }
 
 
@@ -48,11 +48,8 @@ const Coments =({referencia})=>{
                         </thead>
                     </table>
 
-                                <Create referecia={referencia}  getComents={getComents}/>
-                            {/* <form className=" d-flex m-3 gap-3 col"  >
-                                <input type="text" className="form-control" name="description"  id="description" placeholder="Escribir comentario" />
-                                <button className="btn btn-dark" type="submit" >Comentar</button>
-                            </form>   */}
+                        <Create referecia={referencia}  getComents={getComents}/>
+
                 </div>
 
             </div>

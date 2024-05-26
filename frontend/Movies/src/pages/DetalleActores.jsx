@@ -16,7 +16,7 @@ const DetalleActores = () => {
 
     useEffect(() =>{
         getApi(`${pathURL}${id}${idioma}`).then((data=>{
-            console.log(data);
+            // console.log(data);
             setDetalleActor(data)
         })
         

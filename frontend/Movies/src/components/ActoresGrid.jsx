@@ -11,7 +11,7 @@ const ActoresGrid = () =>{
 
     useEffect(()=>{
         getApi(pathURL).then((data=>{
-            console.log(data.results);
+            // console.log(data.results);
             setActores(data.results)
         }))
     },[])

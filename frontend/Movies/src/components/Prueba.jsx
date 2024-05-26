@@ -16,7 +16,7 @@ const Prueba = () => {
     
     useEffect(() => {    
         getApi(pathURL).then((data =>{ 
-            console.log(data);
+            // console.log(data);
             setPrueba(data)
         })
     )},[])

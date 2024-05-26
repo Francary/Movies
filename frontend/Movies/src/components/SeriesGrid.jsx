@@ -9,7 +9,7 @@ const SeriesGrid = () =>{
 
     useEffect(() =>{
         getApi(pathURL).then((data) =>{
-            console.log(data.results);
+            // console.log(data.results);
             setSeries(data.results)
     
     

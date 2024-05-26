@@ -11,7 +11,7 @@ const Redes = () => {
 
     useEffect(() =>{
         getApi(pathURL).then((data =>{
-            console.log(data);
+            // console.log(data);
             setRedes(data)
         })
     )},[])
@@ -20,7 +20,7 @@ const Redes = () => {
         
         <div className="d-flex gap-3 justify-start ms-4 ">
            
-           {/* { if(redes.facebook_id!="")} */}
+          
             <a  href={`https://www.instagram.com/${redes.instagram_id}`}
                 title="Visitar Instagram"
                 target="_blank"

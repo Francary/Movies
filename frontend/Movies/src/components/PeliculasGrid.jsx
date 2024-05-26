@@ -11,7 +11,7 @@ const PeliculasGrid = ()=>{
 
     useEffect (() => {
         getApi(pathURL).then((data)=>{
-            console.log(data.results);
+            // console.log(data.results);
             setPeliculas(data.results)
         })
         

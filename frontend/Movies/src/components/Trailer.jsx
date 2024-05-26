@@ -11,7 +11,7 @@ const Trailer = ({url}) =>{
         const pathURL = `/${url}/${id}/videos`
          getApi(`${pathURL}`).then((data =>{
           
-            console.log(data.results[0].key);
+            // console.log(data.results[0].key);
             setTrailer(data.results[0].key)
         })
     )},[id])

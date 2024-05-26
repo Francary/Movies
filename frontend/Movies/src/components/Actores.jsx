@@ -14,7 +14,7 @@ const Actores = ({url, classImg}) =>{
 
       
         getApi(`${pathURL}`).then((data =>{ 
-            console.log(data.cast );
+            // console.log(data.cast );
             setActores(data.cast)
         })
     )},[])
