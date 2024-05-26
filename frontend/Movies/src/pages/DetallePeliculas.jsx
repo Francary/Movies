@@ -8,7 +8,7 @@ import { formatoFecha } from '../utils/formatoFecha.js'
 import { Coments } from '../components/Coments.jsx'
 
 const pathURL = '/movie/'
-const idioma = "?language=es-AR"
+const idioma =  ""//"?language=es-AR"
 const classImg ='img-medium'
 let puntucion = 0
 
@@ -41,18 +41,19 @@ const DetallePeliculas = () => {
     </div>
     <div className="col-md-9">
         <div className="card-body">
-            <h4 className="card-title">{detallePelicula.title}</h4>
+            <h2 className="card-title">{detallePelicula.title}</h2>
+            <h4>{detallePelicula.title ?  "Overview:":""}</h4>
             <p className="card-text">{detallePelicula.overview}</p>
             <div className="row ">
                 <div className="col-md-2">
                     <p>
-                        <h6>Estreno:</h6>
+                        <h5>Premiere:</h5>
                         {formatoFecha(detallePelicula.release_date)} 
                     </p>
                 </div>
                 <div className="col-md-2">
                     <p>
-                        <h6>Puntuacion:</h6>
+                        <h5>Popularity:</h5>
                         <div className='puntuaje font-weight-bold '>
                         {  puntucion =`${Math.round(detallePelicula.vote_average *10)}%`  } 
 
@@ -62,13 +63,13 @@ const DetallePeliculas = () => {
                 </div>
                 <div className="col-md-6">
                     <p>
-                        <h6>Genero:</h6>
+                        <h5>Genres:</h5>
                         {detallePelicula.genres.map((generos) => generos.name).join(' - ')}
                     </p>
                 </div>
             </div>
             <p>
-                <h6>Productora</h6>
+                <h5>Producer:</h5>
                 {detallePelicula.production_companies.map((productora) => productora.name).join('  ||  ')}
             </p>
             
