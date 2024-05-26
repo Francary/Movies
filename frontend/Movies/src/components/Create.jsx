@@ -19,6 +19,7 @@ const Create = ({referecia ,getComents}) => {
             coment : coment,
         })
         getComents( )
+        setComent('')
         
     }
     
