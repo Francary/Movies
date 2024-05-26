@@ -30,11 +30,11 @@ const Create = ({referecia ,getComents}) => {
             className="form-control"
             name="description"
             id="description"
-            placeholder="Escribir comentario"
+            placeholder="Write Comment"
             value={coment}
             onChange={(e)=> setComent(e.target.value)} 
             />
-        <button className="btn btn-dark" type="submit" >Comentar</button>
+        <button className="btn btn-dark" type="submit" >Comment</button>
     </form> 
 
   

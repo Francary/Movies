@@ -22,7 +22,7 @@ const Actores = ({url, classImg}) =>{
  
     return (
         <>
-        <h2 className="max-width mb-3">Actores:</h2>
+        <h2 className="max-width mb-3">Actors:</h2>
         <div className="container-actores max-width">
 
         {actores.map((actor)=>(

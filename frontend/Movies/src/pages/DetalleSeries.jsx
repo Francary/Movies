@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { Trailer } from '../components/Trailer.jsx'
 import { Coments } from '../components/Coments.jsx'
 const pathURL = '/tv/'
-const idioma = "?language=es-AR"
+const idioma =  ""//"?language=es-AR"
 const classImg ='img-medium'
 let puntucion = 0
 
@@ -40,18 +40,19 @@ const DetalleSeries  = () => {
     </div>
     <div className="col-md-9">
         <div className="card-body">
-            <h4 className="card-title">{detalleSerie.name}</h4>
+            <h2 className="card-title">{detalleSerie.name}</h2>
+            <h4>{detalleSerie.overview ?  "Overview:":""}</h4>
             <p className="card-text">{detalleSerie.overview}</p>
             <div className="row ">
                 <div className="col-md-2">
                     <p>
-                        <h6>Estreno:</h6>
+                        <h5>Premiere:</h5>
                         {formatoFecha(detalleSerie.first_air_date)} 
                     </p>
                 </div>
                 <div className="col-md-2">
                     <p>
-                        <h6>Puntuacion:</h6>
+                        <h5>Popularity:</h5>
                         <div className='puntuaje font-weight-bold '>
                         {  puntucion =`${Math.round(detalleSerie.vote_average *10)}%`  } 
 
@@ -61,7 +62,7 @@ const DetalleSeries  = () => {
                 </div>
                 <div className="col-md-6">
                     <p>
-                        <h6>Genero:</h6>
+                        <h5>Genres:</h5>
                         {detalleSerie.genres.map((generos) => generos.name).join(' - ')}
                     </p>
                 </div>
@@ -70,7 +71,7 @@ const DetalleSeries  = () => {
            
          
             <p>
-                <h6>Productora</h6>
+                <h5>Producer:</h5>
                 {detalleSerie.production_companies.map((productora) => productora.name).join('  ||  ')}
             </p>
             <Link to="https://www.youtube.com/watch?v=3N84gAPPKXE">

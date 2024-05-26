@@ -32,7 +32,7 @@ const Coments =({referencia})=>{
         <>
 
         <div className="max-width ">
-        <h2>Comentarios:</h2>
+        <h2>Comments:</h2>
             <div className="mt-3 mb-3  rounded-3 container-trailer">
                 <div className="col">
                     <table className="table table-hover" >
