@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { Trailer } from '../components/Trailer.jsx'
 import { formatoFecha } from '../utils/formatoFecha.js'
 import { Coments } from '../components/Coments.jsx'
+import { TrailerButton } from '../components/TrailerButton.jsx'
 
 const pathURL = '/movie/'
 const idioma =  ""//"?language=es-AR"
@@ -73,9 +74,7 @@ const DetallePeliculas = () => {
                 {detallePelicula.production_companies.map((productora) => productora.name).join('  ||  ')}
             </p>
             
-            <Link to="https://www.youtube.com/watch?v=3N84gAPPKXE">
-                <button className='btn btn-dark'>Ver Trailer</button>
-            </Link>  
+            <TrailerButton url={pathURL}/>
         </div>
     </div>
   </div>

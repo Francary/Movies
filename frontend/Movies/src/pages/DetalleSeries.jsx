@@ -6,6 +6,7 @@ import { Actores } from '../components/Actores.jsx'
 import { Link } from 'react-router-dom'
 import { Trailer } from '../components/Trailer.jsx'
 import { Coments } from '../components/Coments.jsx'
+import { TrailerButton } from '../components/TrailerButton.jsx'
 const pathURL = '/tv/'
 const idioma =  ""//"?language=es-AR"
 const classImg ='img-medium'
@@ -74,9 +75,8 @@ const DetalleSeries  = () => {
                 <h5>Producer:</h5>
                 {detalleSerie.production_companies.map((productora) => productora.name).join('  ||  ')}
             </p>
-            <Link to="https://www.youtube.com/watch?v=3N84gAPPKXE">
-                <button className='btn btn-dark'>Ver Trailer</button>
-            </Link>           
+            <TrailerButton url={pathURL}/>
+          
         </div>
     </div>
   </div>
