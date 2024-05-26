@@ -21,7 +21,7 @@ const ActoresPopular = () =>{
     return (
      
         <div className='max-width  slider-container'>
-            <h2 className="max-width mt-1">Top 20 Actores :</h2>
+            <h2 className="max-width mt-1">Top 20 Actors :</h2>
             <Slider {...settings}>
                 {actores.map((actor)=>(
                     <ActoresCard key={actor.id} actorMap={actor} classImg={classImg}/> 

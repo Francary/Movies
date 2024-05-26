@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { settings } from "../utils/slider.js";
 
 const pathURL = '/tv/popular'
-const idioma = "?language=es-AR"
+const idioma = ""//"?language=es-AR"
 
 
 const SeriesPopular = ()=>{
@@ -22,7 +22,7 @@ const SeriesPopular = ()=>{
     return(
        
         <div className='max-width  slider-container'>
-            <h2 className="max-width mt-1">Top 20 Series :</h2>
+            <h2 className="max-width mt-1">Top 20 TV Shows :</h2>
             <Slider {...settings}>
                 {series.map((serie) =>(
                     <SeriesCard  key={serie.id} serieMap = {serie}/>

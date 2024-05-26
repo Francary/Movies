@@ -8,12 +8,12 @@ const Navbar = ()=>{
 
             <NavLink  className="navbar-brand " to='/'>Home</NavLink>
 
-            <NavLink  className="navbar-brand" to='/peliculas'>Peliculas</NavLink>
+            <NavLink  className="navbar-brand" to='/peliculas'>Movies</NavLink>
 
-            <NavLink  className="navbar-brand" to='/series'>Series</NavLink>
+            <NavLink  className="navbar-brand" to='/series'>TV Shows</NavLink>
 
 
-            <NavLink  className="navbar-brand" to='/actores/'>Actores</NavLink>
+            <NavLink  className="navbar-brand" to='/actores/'>Actors</NavLink>
             
             {/* <NavLink  className="navbar-brand" to='/prueba/'>Prueba</NavLink> */}
         </div>

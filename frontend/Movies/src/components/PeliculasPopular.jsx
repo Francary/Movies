@@ -6,7 +6,7 @@ import { settings } from "../utils/slider.js";
 
 
 const pathURL = '/movie/popular'
-const idioma = "?language=es-AR"
+const idioma = ""//"?language=es-AR"
 
 const PeliculasPopular = () => {
 
@@ -24,7 +24,7 @@ const PeliculasPopular = () => {
     return(
         
         <div className='max-width  slider-container'>
-        <h2 className="max-width mt-5">Top 20 Peliculas :</h2>
+        <h2 className="max-width mt-5">Top 20 Movies :</h2>
             <Slider {...settings}>
                 {popular.map((pelicula) =>(
                     <PeliculasCard key={pelicula.id} peliculaMap = {pelicula}/>
