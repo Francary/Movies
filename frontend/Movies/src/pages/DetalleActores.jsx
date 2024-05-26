@@ -7,7 +7,7 @@ import{useState, useEffect} from 'react'
 import { useParams} from "react-router-dom"
 
 const pathURL = '/person/'
-const idioma = "?language=es-AR"
+ const idioma = ""//"?language=es-AR"
 
 const DetalleActores = () => {
 
@@ -16,7 +16,7 @@ const DetalleActores = () => {
 
     useEffect(() =>{
         getApi(`${pathURL}${id}${idioma}`).then((data=>{
-            // console.log(data);
+            console.log(data);
             setDetalleActor(data)
         })
         
@@ -32,7 +32,7 @@ const DetalleActores = () => {
     <>
         <div className="card mb-3 mt-5 max-width" >
             <div className="row g-0">
-                <div className="col-md-3 d-grid justify-content-center">
+                <div className="col-md-3 flex-column ">
                      
                     { detalleActor.profile_path != null ? (<img src={ imgURL} className={`${classImg} img-medium m-3 d-flex justify-content-center`}  alt={detalleActor.name} />):(<i className={`fa-solid fa-user-tie avatar d-flex align-items-center justify-content-center ${classImg} m-3`}></i>)}
                     
@@ -41,21 +41,22 @@ const DetalleActores = () => {
                 </div>
                 <div className="col-md-9">
                     <div className="card-body">
-                        <h4 className="card-title">{detalleActor.name}</h4>
+                        <h2 className="card-title">{detalleActor.name}</h2>
+                        <h4>{detalleActor.biography ?  "Biography:":""}</h4>
                         <p className="card-text">{detalleActor.biography}</p>
                         <div className="row ">
                             <div className="col-md-2">
-                                <h6>Cumpleaños:</h6>
+                                <h5>Birthday:</h5>
                                 { formatoFecha(detalleActor.birthday)} 
                             </div>
                             <div className="col-md-2">
-                                <h6>Genero:</h6>
-                                {detalleActor.gender==1? "Mujer":"Hombre"} 
+                                <h5>Gender:</h5>
+                                {detalleActor.gender==1? "Female":"Male"} 
                             </div>
                             <div className="col-md-2">
-                                <h6>Puntuacion:</h6>
+                                <h5>Popularity:</h5>
                                 <div className='puntuaje font-weight-bold '>
-                                    {  Math.round(detalleActor.popularity *10) } 
+                                    {  `${Math.round(detalleActor.popularity)}K` } 
                                 </div>
                             </div>                     
                         </div>

@@ -18,7 +18,7 @@ const Redes = () => {
 
     return(
         
-        <div className="d-flex gap-3 justify-content-center mb-3">
+        <div className="d-flex gap-3 justify-start ms-4 ">
            
            {/* { if(redes.facebook_id!="")} */}
             <a  href={`https://www.instagram.com/${redes.instagram_id}`}

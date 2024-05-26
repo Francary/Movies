@@ -28,7 +28,7 @@ const PeliculasDelActor = () => {
     return(
      
         <div className='max-width  slider-container'>
-            <h2 className="max-width mb-3">Peliculas:</h2>
+            <h2 className="max-width mb-3">Movies:</h2>
             {pelicula.length>1 ?
 
              (   <Slider {...settings}>
