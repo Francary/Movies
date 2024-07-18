@@ -18,21 +18,21 @@ const Actores = ({url, classImg}) =>{
             setActores(data.cast)
         })
     )},[])
-    if(actores != null)
+    if (actores.length === 0) return null
  
     return (
-        <>
-        <h2 className="max-width mb-3">Actors:</h2>
-        <div className="container-actores max-width">
+        <div className="max-width">
+            <h2>Actors:</h2>
+            <div className="container-actores">
 
-        {actores.map((actor)=>(
+            {actores.map((actor)=>(
+                
+                <ActoresCard key={actor.id} actorMap={actor} classImg={classImg}/>
+                
+            ))}
+            </div>
             
-            <ActoresCard key={actor.id} actorMap={actor} classImg={classImg}/>
-            
-        ))}
         </div>
-        
-        </>
         
 )
 }

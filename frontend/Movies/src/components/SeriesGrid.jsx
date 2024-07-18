@@ -6,9 +6,10 @@ const pathURL = '/discover/tv'
 const SeriesGrid = () =>{
 
     const [series , setSeries] = useState([])
+    const [pageNumero, setPageNumero] = useState(1);
 
     useEffect(() =>{
-        getApi(pathURL).then((data) =>{
+        getApi(`${pathURL}?page=${pageNumero}`).then((data) =>{
             // console.log(data.results);
             setSeries(data.results)
     
@@ -16,8 +17,14 @@ const SeriesGrid = () =>{
         })
 
         
-    },[])
+    },[pageNumero])
 
+    const handleNextPage = () => {
+        setPageNumero((page) => page + 1); 
+      };
+    const handleBackPage = () => {
+        setPageNumero((page) => page === 1 ? page : page - 1); 
+      };
 
     return(
 
@@ -29,6 +36,10 @@ const SeriesGrid = () =>{
             ))}
 
         </ul>
+        <div className="d-flex max-width justify-content-center align-items-center ">
+            <button className="btn btn-danger m-3" onClick={handleBackPage}>Back Page</button>
+            <button className="btn btn-primary m-3" onClick={handleNextPage}>Next Page</button>
+        </div>
         </>
     )
         
