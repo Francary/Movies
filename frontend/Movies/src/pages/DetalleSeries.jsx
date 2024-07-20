@@ -1,5 +1,6 @@
 import { getApi } from '../utils/conexionAPI.js'
 import { formatoFecha } from '../utils/formatoFecha.js'
+import { formatoParrafo } from '../utils/formatoParrafo.jsx'
 import { useState , useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import { Actores } from '../components/Actores.jsx'
@@ -42,8 +43,8 @@ const DetalleSeries  = () => {
     <div className="col-md-9">
         <div className="card-body">
             <h2 className="card-title">{detalleSerie.name}</h2>
-            <h4>{detalleSerie.overview ?  "Overview:":""}</h4>
-            <p className="card-text">{detalleSerie.overview}</p>
+            <h4>Overview:</h4>
+            <p className="card-text">{detalleSerie.overview ? formatoParrafo(detalleSerie.overview) : `We don't have an overview translated in English. For ${detalleSerie.name}` }</p>
             <div className="row ">
                 <div className="col-md-2">
                     <p>

@@ -3,6 +3,7 @@ import { Redes } from "../components/Redes.jsx"
 import { SeriesDelActor } from "../components/SeriesDelActor.jsx"
 import { getApi } from "../utils/conexionAPI.js"
 import { formatoFecha } from '../utils/formatoFecha.js'
+import { formatoParrafo } from "../utils/formatoParrafo.jsx"
 import{useState, useEffect} from 'react'
 import { useParams} from "react-router-dom"
 
@@ -42,8 +43,8 @@ const DetalleActores = () => {
                 <div className="col-md-9">
                     <div className="card-body">
                         <h2 className="card-title">{detalleActor.name}</h2>
-                        <h4>{detalleActor.biography ?  "Biography:":""}</h4>
-                        <p className="card-text">{detalleActor.biography}</p>
+                        <h4>Biography:</h4>
+                        <p className="card-text">{detalleActor.biography ?  formatoParrafo(detalleActor.biography):`We don't have a biography for ${detalleActor.name}.`}</p>
                         <div className="row ">
                             <div className="col-md-2">
                                 <h5>Birthday:</h5>

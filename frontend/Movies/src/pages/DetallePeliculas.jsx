@@ -5,6 +5,7 @@ import { Actores } from '../components/Actores.jsx'
 import { Link } from 'react-router-dom'
 import { Trailer } from '../components/Trailer.jsx'
 import { formatoFecha } from '../utils/formatoFecha.js'
+import { formatoParrafo } from '../utils/formatoParrafo.jsx'
 import { Coments } from '../components/Coments.jsx'
 import { TrailerButton } from '../components/TrailerButton.jsx'
 
@@ -43,8 +44,8 @@ const DetallePeliculas = () => {
     <div className="col-md-9">
         <div className="card-body">
             <h2 className="card-title">{detallePelicula.title}</h2>
-            <h4>{detallePelicula.title ?  "Overview:":""}</h4>
-            <p className="card-text">{detallePelicula.overview}</p>
+            <h4>Overview:</h4>
+            <p className="card-text">{detallePelicula.overview ?  formatoParrafo(detallePelicula.overview) :`We don't have an overview translated in English. For ${detallePelicula.title}`}</p>
             <div className="row ">
                 <div className="col-md-2">
                     <p>
